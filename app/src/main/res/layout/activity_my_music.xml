@@ -13,6 +13,6 @@
         android:layout_height="match_parent"
         android:name="com.wesleyreisz.mymusic.FragmentOne"
         android:layout="@layout/fragment_one"
-        />
+        android:id="@+id/my_music"/>
 
 </RelativeLayout>
