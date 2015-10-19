@@ -20,7 +20,7 @@ public class SongAdapter extends ArrayAdapter<Song> {
     private List<Song> mEntries;
     private SimpleDateFormat df = new SimpleDateFormat("MMM d, yyyy (EEE)");
 
-    public SongAdapter(MyMusicActivity context, int textViewResourceId, List<Song> entries) {
+    public SongAdapter(Context context, int textViewResourceId, List<Song> entries) {
         super(context, textViewResourceId, entries);
         mContext = context;
         mEntries = entries;

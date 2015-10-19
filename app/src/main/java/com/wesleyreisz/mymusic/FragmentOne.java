@@ -31,7 +31,7 @@ public class FragmentOne extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_one, container, false);
-        ListView listView = (ListView)view.findViewById(R.id.list_view);
+        ListView listView = (ListView)view.findViewById(R.id.list_view_songs);
         List<Song> songs = new MockMusicService().findAll();
         SongAdapter songAdapter = new SongAdapter(getActivity(), R.layout.fragment_one, songs);
         listView.setAdapter(songAdapter);
