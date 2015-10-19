@@ -1,16 +1,9 @@
 package com.wesleyreisz.mymusic;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ListView;
-
-import com.wesleyreisz.mymusic.model.Song;
-import com.wesleyreisz.mymusic.service.MockMusicService;
-
-import java.util.List;
 
 
 public class MyMusicActivity extends Activity {
@@ -19,12 +12,6 @@ public class MyMusicActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_music);
-
-        ListView listView = (ListView) findViewById(R.id.list_view);
-        List<Song> songs = new MockMusicService().findAll();
-        SongAdapter songAdapter = new SongAdapter(this, R.layout.activity_my_music, songs);
-        listView.setAdapter(songAdapter);
-
     }
 
 
@@ -34,8 +21,6 @@ public class MyMusicActivity extends Activity {
         getMenuInflater().inflate(R.menu.my_music, menu);
         return true;
     }
-
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

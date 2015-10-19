@@ -29,13 +29,13 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
                 testResultFound=true;
             }
         }
-        Assert.assertEquals(true, testResultFound);
+        Assert.assertEquals(true,testResultFound);
     }
 
     public void testFindOne(){
         MockMusicService service = new MockMusicService();
         Song song = service.findOne("Dark Horse");
-        Assert.assertEquals("Dark Horse", song.getSongTitle());
+        Assert.assertEquals("Dark Horse", song.getAlbumTitle());
         Assert.assertEquals("Katy Perry", song.getArtistName());
         Assert.assertEquals("Single", song.getAlbumTitle());
     }
