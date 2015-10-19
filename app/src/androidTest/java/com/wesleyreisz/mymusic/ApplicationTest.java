@@ -25,7 +25,7 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
 
         boolean testResultFound=false;
         for(Song song:songs){
-            if (song.getAlbumTitle().equalsIgnoreCase("Dark Horse")){
+            if (song.getSongTitle().equalsIgnoreCase("Dark Horse")){
                 testResultFound=true;
             }
         }
